@@ -2,8 +2,14 @@
 	position: absolute;
 	left: 0;
 	right: 0;
-	padding: 0;
+	padding: 2em 1em;
 	margin: 0;
+	width: 100%;
+	display: flex;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+	-webkit-align-items: center;
+	        align-items: center;
 }
 
 .header {
@@ -12,6 +18,39 @@
 	     -o-background-size: cover;
 	        background-size: cover;
 	background-position: 50% 0;
-	height: 100vh;
+	height:75em;
+	
+	h1 {
+	padding: 1.5em 0;
+	text-align: center;
+	font-size: 5.6rem;
+	position: relative;
+	}
+
+	&__think {
+		font-family: 'Pacifico-Regular';
+		font-size: 3.4rem;
+		color:#3f3b48;
+		margin: 2rem 11.2rem 0;
+    	position: absolute;
+		display: inline-block;
+	}
+
+	&__creative {
+		font-size: 12rem;
+		color:#ff0000;
+		display: inline-block;
+	}
 }
 
+
+
+.nav {
+	
+	    
+	&__item {
+		display: inline-block;
+		padding: 0 2rem;
+	}
+	
+}
