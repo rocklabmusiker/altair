@@ -1,5 +1,5 @@
 .inner-top {
-	position: absolute;
+	position: relative;
 	left: 0;
 	right: 0;
 	padding: 2em 1em;
@@ -21,7 +21,7 @@
 	height:75em;
 	
 	h1 {
-	padding: 1.5em 0;
+	padding: .5em 0;
 	text-align: center;
 	font-size: 5.6rem;
 	position: relative;
@@ -46,11 +46,20 @@
 
 
 .nav {
-	
+	position: relative;
+    z-index: 100;
 	    
 	&__item {
 		display: inline-block;
-		padding: 0 2rem;
+		line-height: 30px;
+    	padding: 1rem 2rem;
+	}
+
+	&__item--mail{
+		display: inline-block;
+		@include sprite($s-mail);
+		position: relative;
+    	top: 1em; 
 	}
 	
 }

@@ -1,0 +1,82 @@
+@import "../png-sprite";
+.wr-how-we-work{
+	background: url(../../images/desktop/how-work.jpg) no-repeat 50% 0;
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	height: 75em;
+}
+
+.how-we-work {
+	
+	h2 {
+		text-align: center;
+		color: #ff0000;
+		font-size: 10em;
+    	padding: 0.55em 0 0.2em;
+    	include: $s-bulb;
+	}
+
+
+	&__we {
+		color: #3F3B48;
+		border-bottom: 0.15em solid #3f3b48;
+	    display: inline-block;
+	    font-size: 0.7em;
+	    padding: 0;
+	    position: relative;
+	    top: -0.33em;
+	    line-height: 1.2;
+	}
+
+
+	&__wrapper{
+		display: flex;
+		-webkit-justify-content: space-arround;
+		        justify-content: space-arround;
+		padding: 1em;
+	}
+
+
+	&__column {
+		padding: 1em;
+	}
+
+
+	h3 {
+		margin: 1em 0;
+	}
+
+
+	&__plan span {
+		@include sprite($s-bulb);
+		display: inline-block;
+		margin: 0 3px -3px -3px;
+	}
+
+
+	&__action span {
+		@include sprite($s-rocket);
+		display: inline-block;
+		margin: 0 3px -3px -3px;
+	}
+
+
+	&__launch span {
+		@include sprite($s-settings);
+		display: inline-block;
+		margin: 0 3px -3px -3px;
+	}
+
+	a{
+		border-radius: 20px;
+		color: #FFF;
+		background-color: #FF0000;
+		width: 19.5rem;
+		height: 3rem;
+		display: block;
+		margin: 3em auto 0;
+		text-align: center;
+		line-height: 3rem;
+	}
+}

@@ -1,0 +1,89 @@
+.wr-blog-posts {
+	background-color: #3f3b48;
+	height: 75em;
+}
+
+.blog-posts {
+		color: #FFF;
+		position: relative;
+		text-align: center;
+		
+	h2 {
+		font-family: 'KenyanCoffeeRg-Bold';
+		font-size: 5em;
+	}
+		
+	&__our {
+		font-family: 'Pacifico-Regular';
+		font-size: 0.7em;
+		position: absolute;
+		 margin-left: 1.2em;
+	    position: absolute;
+	    top: 0.8em;
+	}
+
+	&__blog {
+		font-family: 'KenyanCoffeeRg-Bold';
+		font-size: 2em;
+	}
+
+	&__page {
+		max-width: 327px;
+		height: 60vh;
+		background-color: #595466;
+		position: relative;
+	}
+
+		img {
+			width: 100%;
+			padding: 2em;
+		}
+
+		.autor {
+			font-family: 'Montserrat-Bold';
+			text-align: left;
+			display: block;
+			padding: 1em 0 1em 2em;
+			
+		}
+
+	&__date {
+		position: absolute;
+		border-radius: 5px;
+		width: 20%;
+		z-index: 10;
+		right: 15px;
+		bottom: 122px;
+	}
+		
+}
+
+
+	
+.date__count {
+	background-color: #FFF;
+	-webkit-border-top-right-radius: 4px;
+			        border-top-right-radius: 4px;		
+	-webkit-border-top-left-radius: 4px;
+			        border-top-left-radius: 4px;	
+
+	h3 {
+		color: #3F3B48;
+		font-size: 4em;
+		padding: 0;	
+	}
+}
+
+.date__month {
+	background-color: #3F3B48;
+	width: 100%;
+	-webkit-border-bottom-right-radius: 4px;
+			        border-bottom-right-radius: 4px;		
+	-webkit-border-bottom-left-radius: 4px;
+			        border-bottom-left-radius: 4px;
+	p {
+		color: #fff;
+		font-size: 1em;
+		padding: .5em;	
+	}
+}

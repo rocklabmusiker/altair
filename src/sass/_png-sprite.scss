@@ -1,0 +1,168 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$s-dribbble-name: 's-Dribbble';
+$s-dribbble-x: 0px;
+$s-dribbble-y: 0px;
+$s-dribbble-offset-x: 0px;
+$s-dribbble-offset-y: 0px;
+$s-dribbble-width: 33px;
+$s-dribbble-height: 33px;
+$s-dribbble-total-width: 90px;
+$s-dribbble-total-height: 90px;
+$s-dribbble-image: 'sprite.png';
+$s-dribbble: (0px, 0px, 0px, 0px, 33px, 33px, 90px, 90px, '../images/sprite.png', 's-Dribbble', );
+
+$s-fb-name: 's-Fb';
+$s-fb-x: 33px;
+$s-fb-y: 0px;
+$s-fb-offset-x: -33px;
+$s-fb-offset-y: 0px;
+$s-fb-width: 33px;
+$s-fb-height: 33px;
+$s-fb-total-width: 90px;
+$s-fb-total-height: 90px;
+$s-fb-image: 'sprite.png';
+$s-fb: (33px, 0px, -33px, 0px, 33px, 33px, 90px, 90px, '../images/sprite.png', 's-Fb', );
+
+$s-twitter-name: 's-Twitter';
+$s-twitter-x: 0px;
+$s-twitter-y: 33px;
+$s-twitter-offset-x: 0px;
+$s-twitter-offset-y: -33px;
+$s-twitter-width: 33px;
+$s-twitter-height: 33px;
+$s-twitter-total-width: 90px;
+$s-twitter-total-height: 90px;
+$s-twitter-image: 'sprite.png';
+$s-twitter: (0px, 33px, 0px, -33px, 33px, 33px, 90px, 90px, '../images/sprite.png', 's-Twitter', );
+
+$s-bulb-name: 's-bulb';
+$s-bulb-x: 66px;
+$s-bulb-y: 0px;
+$s-bulb-offset-x: -66px;
+$s-bulb-offset-y: 0px;
+$s-bulb-width: 24px;
+$s-bulb-height: 24px;
+$s-bulb-total-width: 90px;
+$s-bulb-total-height: 90px;
+$s-bulb-image: 'sprite.png';
+$s-bulb: (66px, 0px, -66px, 0px, 24px, 24px, 90px, 90px, '../images/sprite.png', 's-bulb', );
+
+$s-mail-name: 's-mail';
+$s-mail-x: 33px;
+$s-mail-y: 33px;
+$s-mail-offset-x: -33px;
+$s-mail-offset-y: -33px;
+$s-mail-width: 33px;
+$s-mail-height: 33px;
+$s-mail-total-width: 90px;
+$s-mail-total-height: 90px;
+$s-mail-image: 'sprite.png';
+$s-mail: (33px, 33px, -30px, -33px, 33px, 33px, 90px, 90px, '../images/sprite.png', 's-mail', );
+
+$s-rocket-name: 's-rocket';
+$s-rocket-x: 66px;
+$s-rocket-y: 24px;
+$s-rocket-offset-x: -66px;
+$s-rocket-offset-y: -24px;
+$s-rocket-width: 24px;
+$s-rocket-height: 24px;
+$s-rocket-total-width: 90px;
+$s-rocket-total-height: 90px;
+$s-rocket-image: 'sprite.png';
+$s-rocket: (66px, 24px, -66px, -24px, 24px, 24px, 90px, 90px, '../images/sprite.png', 's-rocket', );
+
+$s-settings-name: 's-settings';
+$s-settings-x: 0px;
+$s-settings-y: 66px;
+$s-settings-offset-x: 0px;
+$s-settings-offset-y: -66px;
+$s-settings-width: 24px;
+$s-settings-height: 24px;
+$s-settings-total-width: 90px;
+$s-settings-total-height: 90px;
+$s-settings-image: 'sprite.png';
+$s-settings: (0px, 66px, 0px, -66px, 24px, 24px, 90px, 90px, '../images/sprite.png', 's-settings', );
+$spritesheet-width: 90px;
+$spritesheet-height: 90px;
+$spritesheet-image: 'sprite.png';
+$spritesheet-sprites: ($s-dribbble, $s-fb, $s-twitter, $s-bulb, $s-mail, $s-rocket, $s-settings, );
+$spritesheet: (90px, 90px, 'sprite.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

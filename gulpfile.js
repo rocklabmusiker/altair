@@ -104,10 +104,10 @@ gulp.task('png-sprite', function () {
         gulp.src(path.src.pngSprite + '*.*')
             .pipe(spritesmith({
                 imgName: 'sprite.png',
-                cssName: '_png-sprite.sass',
-                cssFormat: 'sass',
+                cssName: '_png-sprite.scss',
+                cssFormat: 'scss',
                 algorithm: 'binary-tree',
-                cssTemplate: 'sass.template.mustache',
+                /*cssTemplate: 'sass.template.mustache',*/
                 cssVarMap: function (sprite) {
                     sprite.name = 's-' + sprite.name
                 }
