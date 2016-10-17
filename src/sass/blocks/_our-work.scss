@@ -1,3 +1,4 @@
+@import "../helpers/mixins";
 
 .wr-our-work {
 	background-color: #3f3b48;
@@ -16,7 +17,7 @@
 		font-family: 'Pacifico-Regular';
 		font-size: 3.6rem;
 		color:#fff;
-		margin: 0 4.2rem;
+		margin: 0.8em 1.2em;
     	position: absolute;
 		display: inline-block;
 	}

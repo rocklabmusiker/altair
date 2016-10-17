@@ -172,3 +172,74 @@ p {
 	font-family: 'arial', sans-serif;
 }
 
+@include max_900 {
+
+   html, body {
+    font-size: 8px;
+  }
+
+  h3 {
+    font-size: 2.16rem;
+  }
+
+  h4 {
+    font-size: 1.68rem;
+  }
+
+  p {
+    font-size: 1.44rem;
+  }
+
+  a {
+    font-size: 1.44rem;
+  }
+
+}
+
+@include max_600 {
+
+   html, body {
+    font-size: 6px;
+  }
+
+  h3 {
+    font-size: 2.6rem;
+  }
+
+  h4 {
+    font-size: 2.2rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
+  a {
+    font-size: 2rem;
+  }
+
+}
+
+@include max_480 {
+
+   html, body {
+    font-size: 4px;
+  }
+
+  h3 {
+    font-size: 4rem;
+  }
+
+  h4 {
+    font-size: 3.4rem;
+  }
+
+  p {
+    font-size: 3rem;
+  }
+
+   a {
+    font-size: 3rem;
+  }
+
+}

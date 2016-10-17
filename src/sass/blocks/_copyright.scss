@@ -1,0 +1,102 @@
+@import "../png-sprite";
+@import "../helpers/mixins";
+
+.wr-copyright {
+	background-color: #3F3B48;
+
+}
+
+.copyright {
+	color: #fff;
+	display: flex;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+	-webkit-align-items: center;
+	        align-items: center;
+
+	p {
+		padding: .5em 3em;
+	}
+
+	&__wrapper {
+		padding: .5em 3em;
+	}
+
+	&__titel {
+		display: inline-block;
+		font-size: 1.4rem;
+	    left: -5px;
+	    position: relative;
+	    top: -11px;
+	}
+
+	&__social-fs {
+		@include sprite($s-fb);
+		display: inline-block;
+		margin-top: 5px;
+	}
+
+	&__social-tw {
+		@include sprite($s-twitter);
+		display: inline-block;
+		margin-top: 5px;
+	}
+
+	&__social-dr {
+		@include sprite($s-dribbble);
+		display: inline-block;
+		margin-top: 5px;
+	}
+
+}
+@include max_900 {
+	.copyright {
+
+		&__titel {
+			font-size: 2rem;
+		}
+
+	}
+}
+
+@include max_600 {
+	.copyright {
+		-webkit-flex-direction: column;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	    
+	    p {
+		padding: .5em 0;
+		}
+
+		&__wrapper {
+			padding: .5em 0;
+		}
+
+		&__titel {
+			font-size: 2.4rem;
+		}
+
+	}
+}
+
+@include max_480 {
+	.copyright {
+		-webkit-flex-direction: column;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	    
+	    p {
+		padding: .5em 0;
+		}
+
+		&__wrapper {
+			padding: .5em 0;
+		}
+
+		&__titel {
+			font-size: 3rem;
+		}
+
+	}
+}

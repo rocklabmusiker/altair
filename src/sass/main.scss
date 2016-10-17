@@ -2,7 +2,8 @@
 @import "base/settings";
 @import "base/foundation";
 
-// Vendor
+// helpers
+@import "helpers/mixins";
 
 // Sprite
 @import "png-sprite";
@@ -10,9 +11,11 @@
 // Components
 @import "components/variables";
 
-// Layouts
+// Blocks
 @import "blocks/base";
 @import "blocks/header";
 @import "blocks/our-work";
 @import "blocks/how-we-work";
 @import "blocks/blog-posts";
+@import "blocks/fun-facts";
+@import "blocks/copyright";

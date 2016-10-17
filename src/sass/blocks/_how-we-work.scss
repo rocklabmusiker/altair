@@ -1,4 +1,7 @@
 @import "../png-sprite";
+@import "../helpers/mixins";
+
+
 .wr-how-we-work{
 	background: url(../../images/desktop/how-work.jpg) no-repeat 50% 0;
 	-webkit-background-size: cover;
@@ -35,6 +38,7 @@
 		-webkit-justify-content: space-arround;
 		        justify-content: space-arround;
 		padding: 1em;
+		
 	}
 
 
@@ -79,4 +83,71 @@
 		text-align: center;
 		line-height: 3rem;
 	}
+}
+
+/* media */
+
+
+@include max_600 {
+
+	.wr-how-we-work {
+    	height: 96em;
+	}
+	.how-we-work{
+		
+	
+		&__wrapper{
+			-webkit-flex-wrap: wrap;
+			    -ms-flex-wrap: wrap;
+			        flex-wrap: wrap;
+		}
+
+		h2 {
+			padding: 0 0 0.2em;
+		}
+
+		&__column {
+			margin: -8em 0 5em;
+		}
+
+		a {
+			 height: 6rem;
+		    line-height: 5.5rem;
+		    margin: 0 auto;
+		    width: 27rem;
+		}
+	}
+}
+
+@include max_480 {
+	
+	.wr-how-we-work {
+    	height: 170em;
+	}
+	.how-we-work{
+		
+	
+		&__wrapper{
+			-webkit-flex-wrap: wrap;
+			    -ms-flex-wrap: wrap;
+			        flex-wrap: wrap;
+		}
+
+		h2 {
+			padding: 0 0 0.2em;
+		}
+
+		&__column {
+			margin: -8em 0 5em;
+		}
+
+		a {
+			height: 8rem;
+		    line-height: 8rem;
+		    margin: 0 auto 0;
+		    width: 35rem;
+		}
+	}
+
+
 }

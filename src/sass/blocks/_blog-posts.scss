@@ -1,12 +1,23 @@
+@import "../png-sprite";
+@import "../helpers/mixins";
+
 .wr-blog-posts {
 	background-color: #3f3b48;
-	height: 75em;
 }
 
 .blog-posts {
 		color: #FFF;
 		position: relative;
 		text-align: center;
+		
+		&__wrapper{
+			display: flex;
+			-webkit-justify-content: space-around;
+			        justify-content: space-around;
+			-webkit-flex-wrap: wrap;
+			    -ms-flex-wrap: wrap;
+			        flex-wrap: wrap;
+		}
 		
 	h2 {
 		font-family: 'KenyanCoffeeRg-Bold';
@@ -29,9 +40,10 @@
 
 	&__page {
 		max-width: 327px;
-		height: 60vh;
 		background-color: #595466;
 		position: relative;
+		margin: 1em 1em 2em;
+		
 	}
 
 		img {
@@ -52,8 +64,25 @@
 		border-radius: 5px;
 		width: 20%;
 		z-index: 10;
-		right: 15px;
-		bottom: 122px;
+		right: 17px;
+		bottom: 155px;
+	}
+
+	h4 {
+		padding: 0 4em 0 1.4em;
+		text-align: left;	
+	}
+
+	a {
+		float: left;
+    	padding: 2em 0 3em 1.5em;
+		display: inline-block;	
+	}
+
+	a span{
+		@include sprite($s-read-more);
+		display: inline-block;
+		margin: 0 7px -3px 0;	
 	}
 		
 }
@@ -69,7 +98,7 @@
 
 	h3 {
 		color: #3F3B48;
-		font-size: 4em;
+		font-size: 3em;
 		padding: 0;	
 	}
 }
@@ -83,7 +112,128 @@
 			        border-bottom-left-radius: 4px;
 	p {
 		color: #fff;
-		font-size: 1em;
-		padding: .5em;	
+		font-size: .9em;
+		padding: 0.5em;
+    	text-align: center;	
 	}
+}
+
+
+@include max_900 {
+
+	.blog-posts {
+		&__wrapper{
+			-webkit-flex-wrap: wrap;
+			    -ms-flex-wrap: wrap;
+			        flex-wrap: wrap;
+		}
+
+		.autor {
+			font-size: 1.4em;
+			
+		}
+
+		h4 {
+			font-size: 2em;	
+		}
+
+		a {
+			font-size: 1.4em;	
+		}
+
+		&__date {
+		    width: 25%;
+		}
+
+
+	}
+
+	.date__month p {
+		font-size: 1.2em;
+	}
+
+	.date__count h3 {
+		padding: 8px 0;
+	}
+
+}
+
+@include max_600 {
+
+	.blog-posts {
+		&__wrapper{
+			-webkit-flex-wrap: wrap;
+			    -ms-flex-wrap: wrap;
+			        flex-wrap: wrap;
+		}
+
+		.autor {
+			font-size: 2em;
+			
+		}
+
+		h4 {
+			font-size: 2.6em;	
+		}
+
+		a {
+			font-size: 2em;	
+		}
+
+		&__date {
+		    width: 25%;
+		}
+
+
+	}
+
+	.date__month p {
+		font-size: 1.9em;
+	}
+
+	.date__count h3 {
+		padding: 8px 0;
+		font-size: 4em;
+	}
+	
+}
+
+@include max_480 {
+
+	.blog-posts {
+
+		&__wrapper{
+			-webkit-flex-wrap: wrap;
+			    -ms-flex-wrap: wrap;
+			        flex-wrap: wrap;
+		}
+
+		.autor {
+			font-size: 3em;
+			
+		}
+
+		h4 {
+			font-size: 3.6em;	
+		}
+
+		a {
+			font-size: 3em;	
+		}
+
+		&__date {
+		    width: 25%;
+		}
+
+	}
+
+	.date__month p {
+		font-size: 2.2em;
+	}
+
+	.date__count h3 {
+		padding: 8px 0;
+		font-size: 5em;
+	}
+	
 }

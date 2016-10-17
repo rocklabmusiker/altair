@@ -1,0 +1,92 @@
+@import "../helpers/mixins";
+
+.wr-fun-facts{
+	background: url(../../images/desktop/fun-facts.jpg) no-repeat 50% 0;
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	height: 75vh;
+}
+
+.fun-facts{
+	text-align: center;
+	
+	h2{
+		color: #ff0000;
+		font-size: 10em;
+		padding-top: 0.5em;
+	}
+
+	&__fun{
+		display: inline-block;
+		color: #3F3B48;
+		font-size: .8em;
+		border-bottom: 10px solid #3F3B48;
+		line-height: 0.91;
+	    position: relative;
+	    top: -15px;
+	}
+}
+
+/* media */
+
+@include max_900 {
+	.wr-fun-facts{
+		background: url(../../images/tablet/fun-facts.jpg) no-repeat 50% 0;
+		-webkit-background-size: cover;
+		     -o-background-size: cover;
+		        background-size: cover;
+		height: 47vh;
+	}
+
+	.fun-facts__fun {
+	    top: -13px;
+	    border-bottom: 10px solid #3f3b48;
+	}
+
+	.fun-facts h2{
+		padding-top: 0;
+	}
+
+}
+
+@include max_600 {
+	.wr-fun-facts{
+		background: url(../../images/tablet/fun-facts.jpg) no-repeat 50% 0;
+		-webkit-background-size: cover;
+		     -o-background-size: cover;
+		        background-size: cover;
+		height: 44vh;
+	}
+
+	.fun-facts__fun {
+	    border-bottom: 7px solid #3f3b48;
+    	top: -10px;
+	}
+
+	.fun-facts h2{
+		padding-top: 0;
+	}
+
+}
+
+@include max_480 {
+	.wr-fun-facts{
+		background: url(../../images/mobile/fun-facts.jpg) no-repeat 50% 0;
+		-webkit-background-size: cover;
+		     -o-background-size: cover;
+		        background-size: cover;
+		height: 40vh;
+	}
+
+	.fun-facts__fun {
+	    border-bottom: 3px solid #3f3b48;
+    	top: -5px;
+	}
+
+	.fun-facts h2{
+		padding-top: 0;
+	}
+
+	
+}

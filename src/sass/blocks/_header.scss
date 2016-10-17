@@ -1,3 +1,5 @@
+@import "../helpers/mixins";
+
 .inner-top {
 	position: relative;
 	left: 0;
@@ -10,6 +12,9 @@
 	        justify-content: space-between;
 	-webkit-align-items: center;
 	        align-items: center;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
 }
 
 .header {
@@ -21,17 +26,18 @@
 	height:75em;
 	
 	h1 {
-	padding: .5em 0;
-	text-align: center;
-	font-size: 5.6rem;
-	position: relative;
+		padding: .5em 0;
+		text-align: center;
+		font-size: 5.6rem;
+		position: relative;
+		color: #3f3b48;
 	}
 
 	&__think {
 		font-family: 'Pacifico-Regular';
 		font-size: 3.4rem;
 		color:#3f3b48;
-		margin: 2rem 11.2rem 0;
+		margin: 4rem 11.2rem 0;
     	position: absolute;
 		display: inline-block;
 	}
@@ -48,11 +54,24 @@
 .nav {
 	position: relative;
     z-index: 100;
+    
+    &__list{
+    	display: block;
+    }
 	    
 	&__item {
 		display: inline-block;
 		line-height: 30px;
     	padding: 1rem 2rem;
+	}
+
+	&__item:hover a {
+		color: #ff0000;
+		-webkit-transition: all .5s ease;
+		   -moz-transition: all .5s ease;
+		    -ms-transition: all .5s ease;
+		     -o-transition: all .5s ease;
+		        transition: all .5s ease;
 	}
 
 	&__item--mail{
@@ -61,5 +80,66 @@
 		position: relative;
     	top: 1em; 
 	}
+
+	#menu {
+		display: none;
+	}
 	
+}
+
+
+/* media */
+
+@include max_900 {
+	.inner-top {
+		-webkit-flex-direction: column;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	    padding: 0;
+	
+		&__logo {
+			display: block;
+			margin: 0 auto;
+			-webkit-flex-grow: 1;
+	    	        flex-grow: 1;
+		}
+
+	}
+
+	.nav {
+		width: 100%;
+	    
+	    &__list{
+	    	width: 100%;
+	    	-webkit-flex-grow: 1;
+	    	        flex-grow: 1;
+	    	display: none; 
+	    }
+		    
+		&__item {
+			display: block;
+			line-height: 30px;
+	    	padding: 1rem 0;
+	    	text-align: center;
+	    	border-bottom: 1px solid #3f3b48;
+		}
+
+		&__item--mail{
+			display: block;
+	    	top: .5em;
+	    	margin: 0 auto;
+	    	border-bottom: none; 
+		}
+
+		#menu {
+			display: block;
+			right: 0;
+			padding: 0 1em;
+			position: absolute;
+		}
+	
+}	
+
+
+
 }
