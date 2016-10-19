@@ -1,0 +1,141 @@
+@import "../helpers/mixins";
+
+#modal_form {
+  background: #fff none repeat scroll 0 0;
+  border: 2px solid #484848;
+  border-radius: 5px;
+  display: none;
+  height: 450px;
+  left: 0;
+  margin: -150px auto;
+  opacity: 0;
+  padding: 20px 10px;
+  position: fixed;
+  right: 0;
+  top: 30%;
+  max-width: 500px;
+  z-index: 9999;
+}
+
+.element.style {
+  top: 30%;
+}
+
+/* Кнoпкa зaкрыть для тех ктo в тaнке) */
+#modal_form #modal_close {
+  color: #484848;
+  cursor: pointer;
+  display: block;
+  font-size: 2.5rem;
+  height: 22px;
+  position: absolute;
+  right: 8px;
+  top: 0;
+  width: 22px;
+}
+/* Пoдлoжкa */
+#overlay {
+  z-index:3; /* пoдлoжкa дoлжнa быть выше слoев элементoв сaйтa, нo ниже слoя мoдaльнoгo oкнa */
+  position:fixed; /* всегдa перекрывaет весь сaйт */
+  background-color:#fff; /* чернaя */
+  opacity:0.8; /* нo немнoгo прoзрaчнa */
+  -moz-opacity:0.8; /* фикс прозрачности для старых браузеров */
+  filter:alpha(opacity=80);
+  width:100%;
+  height:100%; /* рaзмерoм вo весь экрaн */
+  top:0; /* сверху и слевa 0, oбязaтельные свoйствa! */
+  left:0;
+  cursor:pointer;
+  display:none; /* в oбычнoм сoстoянии её нет) */
+}
+
+.modal{
+  padding: 4em 4em;
+  
+  &__input{
+    display: block;
+    margin-top: 2em;
+    width: 100%;
+    height: 50px;
+    border: 2px solid #3F3B48;
+    color: #3F3B48;
+  }
+
+  &__input[placeholder]{
+    padding-left: 5px;
+  }
+
+  &__area{
+    display: block;
+    margin-top: 2em;
+    width: 100%;
+    height: 100px;
+    border: 2px solid #3F3B48;
+    color: #3F3B48; 
+  }
+
+   &__area[placeholder]{
+    padding: 5px;
+  }
+
+  &__button{
+    display: block;
+    margin: 2em auto 0;
+    width: 100px;
+    height: 40px;
+    border: 2px solid #3F3B48;
+    text-align: center;
+    line-height: 40px;
+    color: #3F3B48;
+    font-size: 1.4em;
+  }
+
+  &__button:hover{
+    border: 2px solid #3F3B48;
+    color: #fff;
+    background: #999;
+    -webkit-transition: all .4s ease;
+       -moz-transition: all .4s ease;
+        -ms-transition: all .4s ease;
+         -o-transition: all .4s ease;
+            transition: all .4s ease;
+  }
+
+}
+
+
+
+
+@include max-900{
+
+ #modal_form #modal_close{
+    font-size: 3em;
+  }
+
+ .modal__button{
+   font-size: 1.8em;
+ }
+
+} 
+
+@include max-600{
+  #modal_form #modal_close{
+    font-size: 4em;
+  }
+
+ .modal__button{
+   font-size: 2.2em;
+ }
+
+}
+
+@include max-480{
+  #modal_form #modal_close{
+    font-size: 6em;
+  }
+
+ .modal__button{
+   font-size: 3em;
+ }
+
+}

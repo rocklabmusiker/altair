@@ -9,7 +9,9 @@
 @import "png-sprite";
 
 // Components
-@import "components/variables";
+@import "components/carousel";
+@import "components/modal-form";
+
 
 // Blocks
 @import "blocks/base";
@@ -19,3 +21,4 @@
 @import "blocks/blog-posts";
 @import "blocks/fun-facts";
 @import "blocks/copyright";
+

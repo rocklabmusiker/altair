@@ -29,6 +29,15 @@
 }
 
 /* media */
+@include max_1250 {
+	.wr-fun-facts{
+		background: url(../../images/desktop/fun-facts.jpg) no-repeat 50% 0;
+		-webkit-background-size: cover;
+		     -o-background-size: cover;
+		        background-size: cover;
+		height: 60vh;
+	}
+}
 
 @include max_900 {
 	.wr-fun-facts{
@@ -36,7 +45,7 @@
 		-webkit-background-size: cover;
 		     -o-background-size: cover;
 		        background-size: cover;
-		height: 47vh;
+		height: 36vh;
 	}
 
 	.fun-facts__fun {
@@ -56,7 +65,7 @@
 		-webkit-background-size: cover;
 		     -o-background-size: cover;
 		        background-size: cover;
-		height: 44vh;
+		height: 36vh;
 	}
 
 	.fun-facts__fun {
@@ -76,7 +85,7 @@
 		-webkit-background-size: cover;
 		     -o-background-size: cover;
 		        background-size: cover;
-		height: 40vh;
+		height: 31vh;
 	}
 
 	.fun-facts__fun {

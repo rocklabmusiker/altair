@@ -4,6 +4,7 @@
     //= template/metatags.html
     //= template/styles.html
     //= template/scripts.html
+   
 </head>
 <body>
     //= template/svg.html
@@ -13,8 +14,12 @@
 	<!-- our-work -->	
 			<div class="our-work">
 				<h2><span class="our-work__our">Our</span>LATEST<span class="our-work__work">WORK</span></h2>
-				<div class="slider">
-					<img src="images/desktop/slider-1.jpg" alt="">
+				<div class="cycle-slideshow" data-cycle-fx=scrollHorz data-cycle-speed="1000">
+				    <span class="cycle-prev"></span>
+				    <span class="cycle-next"></span>
+				    <span class="middle"></span>
+				    <img src="images/desktop/slider-1.jpg" alt="slide-1">
+				    <img src="images/desktop/slider-2.jpg" alt="slide-2">
 				</div>
 			</div>
 		</div><!--wr-main-->
@@ -46,9 +51,9 @@
 
 	<!-- our latest blog posts -->
 	<div class="wrapper wr-blog-posts">	
-		<section class="blog-posts">
+		<section class="blog-posts" id="slider">
 			<h2><span class="blog-posts__our">Our </span>LATEST <span class="blog-posts__blog">BLOG</span> POSTS</h2>
-			<div class="blog-posts__wrapper">
+			<div class="blog-posts__wrapper"> 
 				<div class="blog-posts__page">
 					<img src="images/desktop/post-img.png" alt="img">
 					<div class="blog-posts__date">
@@ -92,7 +97,6 @@
 					<a><span class="icon"></span> Read Article</a>
 				</div>
 			</div>
-			<div class="scroll">scroll</div>
 		</section>
 	</div><!-- wrapper -->
 
@@ -118,6 +122,20 @@
 		</div>
 	</div><!-- wrapper -->
 
+	<!-- MODAL WINDOW -->
+
+      <div id="modal_form"><!-- Сaмo oкнo -->
+        <span id="modal_close">X</span> <!-- Кнoпкa зaкрыть -->
+       <form class="modal">
+       		<input type="text" placeholder="Name" class="modal__input">
+       		<input type="text" placeholder="Email" class="modal__input">
+       		<textarea class="modal__area" placeholder="Message"></textarea>
+       		<a href="#" class="modal__button">SEND</a>
+       </form>
+      </div>
+      <div id="overlay"></div><!-- Пoдлoжкa -->
+
 	<script src="js/main.js"></script>
+		
 </body>
 </html>

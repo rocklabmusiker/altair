@@ -13,10 +13,10 @@
 		&__wrapper{
 			display: flex;
 			-webkit-justify-content: space-around;
-			        justify-content: space-around;
+			        justify-content: space-around; 
 			-webkit-flex-wrap: wrap;
 			    -ms-flex-wrap: wrap;
-			        flex-wrap: wrap;
+			        flex-wrap: wrap; 
 		}
 		
 	h2 {
@@ -43,12 +43,11 @@
 		background-color: #595466;
 		position: relative;
 		margin: 1em 1em 2em;
-		
+		padding: 2em;
 	}
 
 		img {
 			width: 100%;
-			padding: 2em;
 		}
 
 		.autor {
@@ -76,13 +75,19 @@
 	a {
 		float: left;
     	padding: 2em 0 3em 1.5em;
-		display: inline-block;	
+		display: inline-block;
+		cursor: pointer;	
 	}
 
 	a span{
 		@include sprite($s-read-more);
 		display: inline-block;
-		margin: 0 7px -3px 0;	
+		margin: 0 7px -3px 0;
+		cursor: pointer;	
+	}
+
+	a:hover{
+		color: #3F3B48;	
 	}
 		
 }
@@ -116,7 +121,9 @@
 		padding: 0.5em;
     	text-align: center;	
 	}
+
 }
+
 
 
 @include max_900 {
@@ -126,6 +133,7 @@
 			-webkit-flex-wrap: wrap;
 			    -ms-flex-wrap: wrap;
 			        flex-wrap: wrap;
+
 		}
 
 		.autor {

@@ -103,10 +103,10 @@ gulp.task('png-sprite', function () {
     var spriteData =
         gulp.src(path.src.pngSprite + '*.*')
             .pipe(spritesmith({
-                imgName: 'sprite.png',
+                imgName: '../images/sprite.png',
                 cssName: '_png-sprite.scss',
                 cssFormat: 'scss',
-                algorithm: 'binary-tree',
+                algorithm: 'top-down',
                 /*cssTemplate: 'sass.template.mustache',*/
                 cssVarMap: function (sprite) {
                     sprite.name = 's-' + sprite.name
@@ -165,3 +165,12 @@ gulp.task('watch', function () {
 });
 
 gulp.task('start', ['build', 'browser-sync', 'watch']);
+
+
+
+/*my task to test css*/
+gulp.task('my-css', function() {
+    return gulp.src('src/sass/main.scss')
+    .pipe(sass())
+    .pipe(gulp.dest('src/'));
+});
