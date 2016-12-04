@@ -1,9 +1,10 @@
 @import "../png-sprite";
 @import "../helpers/mixins";
+@import "base";
 
 
-.wr-how-we-work{
-	background: url(../../images/desktop/how-work.jpg) no-repeat 50% 0;
+.wrapper.wr-how-we-work{
+	background: url(../images/desktop/how-work.jpg) no-repeat 50% 0;
 	-webkit-background-size: cover;
 	     -o-background-size: cover;
 	        background-size: cover;
@@ -90,7 +91,7 @@
 
 @include max_600 {
 
-	.wr-how-we-work {
+	.wrapper.wr-how-we-work {
     	height: 96em;
 	}
 	.how-we-work{
@@ -121,7 +122,7 @@
 
 @include max_480 {
 	
-	.wr-how-we-work {
+	.wrapper.wr-how-we-work {
     	height: 170em;
 	}
 	.how-we-work{

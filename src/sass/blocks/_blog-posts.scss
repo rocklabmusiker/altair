@@ -1,7 +1,8 @@
 @import "../png-sprite";
 @import "../helpers/mixins";
+@import "base";
 
-.wr-blog-posts {
+.wrapper.wr-blog-posts {
 	background-color: #3f3b48;
 }
 

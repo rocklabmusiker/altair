@@ -29,7 +29,7 @@ var path = {
     src: {
         html: 'src/*.html',
         js: 'src/js/main.js',
-        style: 'src/sass/main.scss',
+        style: 'src/sass/*.scss',
         img: 'src/images/**/*.*',
         pngSprite: 'src/sprite/png/',
         svgSprite: 'src/sprite/svg/**/*.svg',
@@ -72,11 +72,11 @@ gulp.task('js:build', function () {
 gulp.task('style:build', function () {
     gulp.src(path.src.style)
         .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
-        .pipe(sourcemaps.init())
+        /*.pipe(sourcemaps.init())*/
         .pipe(sass({errLogToConsole: true}))
         .pipe(prefixer())
         .pipe(cssmin())
-        .pipe(sourcemaps.write())
+        /*.pipe(sourcemaps.write())*/
         .pipe(gulp.dest(path.build.css))
         .pipe(browserSync.stream());
 });
